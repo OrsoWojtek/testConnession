@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -15,7 +16,7 @@
          <children>
             <ImageView fitHeight="200.0" fitWidth="320.0" layoutX="560.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../img/ILearn_Title.png" />
+                  <Image url="@images/ILearn_Title.png" />
                </image>
             </ImageView>
          </children>
@@ -26,7 +27,7 @@
          <children>
             <ImageView fitHeight="394.0" fitWidth="383.0" layoutX="529.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../img/plain_avatar.png" />
+                  <Image url="@images/plain_avatar.png" />
                </image>
             </ImageView>
             <TextField alignment="CENTER" layoutX="431.0" layoutY="444.0" prefHeight="92.0" prefWidth="579.0" promptText="Username" style="-fx-background-color: #871414; -fx-border-color: black; -fx-border-width: 5; -fx-font-size: 48;">
@@ -39,15 +40,21 @@
                   <Font size="48.0" />
                </font>
             </PasswordField>
-            <ImageView fitHeight="134.0" fitWidth="120.0" layoutX="1063.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView accessibleRole="BUTTON" fitHeight="134.0" fitWidth="120.0" layoutX="1063.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../img/log_button_icon.png" />
+                  <Image url="@images/log_button_icon.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
             </ImageView>
-            <Label accessibleRole="BUTTON" alignment="CENTER" layoutX="461.0" layoutY="773.0" prefHeight="44.0" prefWidth="519.0" style="-fx-font-weight: bolder; -fx-font-size: 30;" text="Non hai ancora un account? Registrati" textAlignment="CENTER" underline="true">
+            <Label accessibleRole="BUTTON" alignment="CENTER" layoutX="264.0" layoutY="770.0" prefHeight="44.0" prefWidth="913.0" style="-fx-font-weight: bolder; -fx-font-size: 30;" text="Non hai ancora un account? Registrati" textAlignment="CENTER" underline="true">
                <font>
                   <Font size="30.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
             </Label>
          </children>
       </AnchorPane>
