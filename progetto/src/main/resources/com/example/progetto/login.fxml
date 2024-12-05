@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: #D07373;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: #D07373;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progetto.LoginController">
    <top>
       <AnchorPane prefHeight="140.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
          <children>
@@ -30,17 +30,17 @@
                   <Image url="@images/plain_avatar.png" />
                </image>
             </ImageView>
-            <TextField alignment="CENTER" layoutX="431.0" layoutY="444.0" prefHeight="92.0" prefWidth="579.0" promptText="Username" style="-fx-background-color: #871414; -fx-border-color: black; -fx-border-width: 5; -fx-font-size: 48;">
+            <TextField fx:id="username" alignment="CENTER" layoutX="431.0" layoutY="444.0" prefHeight="92.0" prefWidth="579.0" promptText="Username" style="-fx-background-color: #871414; -fx-border-color: black; -fx-border-width: 5; -fx-font-size: 48;">
                <font>
                   <Font size="48.0" />
                </font>
             </TextField>
-            <PasswordField alignment="CENTER" layoutX="431.0" layoutY="579.0" prefHeight="92.0" prefWidth="579.0" promptText="Password" style="-fx-background-color: #871414; -fx-border-color: black; -fx-border-width: 5; -fx-font-size: 48;">
+            <PasswordField fx:id="pssw" alignment="CENTER" layoutX="431.0" layoutY="579.0" prefHeight="92.0" prefWidth="579.0" promptText="Password" style="-fx-background-color: #871414; -fx-border-color: black; -fx-border-width: 5; -fx-font-size: 48;">
                <font>
                   <Font size="48.0" />
                </font>
             </PasswordField>
-            <ImageView accessibleRole="BUTTON" fitHeight="134.0" fitWidth="120.0" layoutX="1063.0" layoutY="565.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView accessibleRole="BUTTON" fitHeight="134.0" fitWidth="120.0" layoutX="1063.0" layoutY="565.0" onMouseClicked="#onLoginButtonClick" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/log_button_icon.png" />
                </image>
