@@ -11,7 +11,7 @@ public class ILearn extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ILearn.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ILearn.class.getResource("login_GUI.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1440, 1024);
         stage.setTitle("ILearn");
         stage.setScene(scene);
