@@ -1,56 +1,39 @@
 package com.example.progetto;
 
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.util.Objects;
 
+//----CLASSE FANTOCCIO PER 'SIMULARE' UN PROCESSO DI AUTENTICAZIONE
 public class LoginController {
-
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
     //----USERNAME UTENTE----
-    @FXML
-    private TextField username;
+    private static final String username = "studente";
     //----PASSWORD UTENTE----
-    @FXML
-    private PasswordField pssw;
+    private static final String password = "1234";
 
-    @FXML
-    public void onLoginButtonClick(MouseEvent event) throws IOException {
-        checkLogin();
-    }
-
-    private void checkLogin() throws IOException {
-        if(username.getText().toString().equals("studente") && pssw.getText().toString().equals("1234")){
-            Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
-            stage = (Stage)username.getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        }
-        else{
+    //----METODO DI VERIFICA DEL LOGIN----
+    public static boolean checkLogin(String user_insert, String pssw_insert) throws IOException {
+        if(!(getUsername().equals(user_insert) && getPassword().equals(pssw_insert))){
             // Mostra un popup di errore
-            showErrorPopup("Errore di login", "Inserisci 'studente' come username e '1234' come password.");
-        };
+            showErrorPopup("Inserisci '"+getUsername()+"' come username e '"+getPassword()+"' come password.");
+            return false;
+        }
+        return true;
     }
 
-    private void showErrorPopup(String title, String message) {
+    //----METODO PER POPUP DI ERRORE----
+    private static void showErrorPopup(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);
+        alert.setTitle("Errore di login");
         alert.setHeaderText(null);
         alert.setContentText(message);
 
         // Mostra il popup e attendi la chiusura
         alert.showAndWait();
+    }
+    private static String getUsername(){
+        return username;
+    }
+    private static String getPassword(){
+        return password;
     }
 }
