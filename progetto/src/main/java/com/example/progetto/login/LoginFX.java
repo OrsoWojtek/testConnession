@@ -1,4 +1,4 @@
-package com.example.progetto;
+package com.example.progetto.login;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,7 +30,7 @@ public class LoginFX {
         controller.checkLogin(bean);                            //Verifica che siano state inserite le credenziali corrette
 
         if(bean.getCheck()){                                                                                           //Se le credenziali erano corrette...
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("home.fxml")));          //...Mostra la pagina di home
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/home.fxml")));          //...Mostra la pagina di home
             Stage stage = (Stage) username.getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);

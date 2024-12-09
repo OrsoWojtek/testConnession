@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
@@ -15,18 +16,21 @@
             <children>
                 <ImageView fitHeight="200.0" fitWidth="320.0" layoutX="-44.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@images/ILearn_Title.png" />
+                        <Image url="@com/example/progetto/images/ILearn_Title.png" />
                     </image>
                 </ImageView>
             <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="1355.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/home_icon.png" />
+                  <Image url="@com/example/progetto/images/home_icon.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="51.0" fitWidth="47.0" layoutX="1289.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView accessibleRole="BUTTON" fitHeight="51.0" fitWidth="47.0" layoutX="1289.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/logout_icon.png" />
+                  <Image url="@com/example/progetto/images/logout_icon.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
             </ImageView>
             </children>
         </AnchorPane>
@@ -36,27 +40,27 @@
          <children>
             <ImageView fitHeight="851.0" fitWidth="710.0" layoutX="708.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/page_bg.png" />
+                  <Image url="@com/example/progetto/images/page_bg.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="851.0" fitWidth="710.0" layoutX="14.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/page_bg.png" />
+                  <Image url="@com/example/progetto/images/page_bg.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="851.0" fitWidth="720.0" layoutX="25.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/page_bg.png" />
+                  <Image url="@com/example/progetto/images/page_bg.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="851.0" fitWidth="720.0" layoutX="681.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/page_bg.png" />
+                  <Image url="@com/example/progetto/images/page_bg.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="473.0" fitWidth="576.0" layoutX="69.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/student_avatar.png" />
+                  <Image url="@com/example/progetto/images/student_avatar.png" />
                </image>
             </ImageView>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="86.0" layoutX="107.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" width="371.0" />
@@ -73,7 +77,7 @@
             </Label>
             <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="1318.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/add_icon.png" />
+                  <Image url="@com/example/progetto/images/add_icon.png" />
                </image>
             </ImageView>
             <Label layoutX="745.0" layoutY="78.0" style="-fx-font-weight: bold; -fx-font-size: 36;" text="Corsi frequentati" underline="true" wrapText="true">

@@ -1,4 +1,4 @@
-package com.example.progetto;
+package com.example.progetto.login;
 
 //----BEAN CONTENENTE INFORMAZIONI UTILI PER IL LOGIN----
 public class LoginInfoBean {

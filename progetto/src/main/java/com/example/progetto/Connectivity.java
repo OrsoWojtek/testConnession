@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Properties;
 
-//----CLASSE PER LA CONNESSIONE AL DB (IMPLEMENTA IL PATTERN SINGLETON)
+//----CLASSE PER LA CONNESSIONE AL DB (IMPLEMENTA IL PATTERN SINGLETON)----
 public class Connectivity {
     private static Connectivity istance; //----VARIABILE STATICA CHE CONTIENE L'UNICA ISTANZA DELLA CLASSE
     private final Connection connect; //----CONNESSIONE AL DB
@@ -42,6 +42,7 @@ public class Connectivity {
         return istance;
     }
 
+    //----METODO PER CHIUDERE LO STATEMENT----
     public void close(PreparedStatement stm){
         try {
             if (stm != null){
