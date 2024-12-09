@@ -13,12 +13,8 @@ public class LoginInfoBean {
     public void setPassword(String password) {
         this.password = password;
     }
-    public void setCheck(boolean check) {
-        this.check = check;
-    }
-    public boolean getCheck() {
-        return check;
-    }
+    public void setCheck(boolean check) {this.check = check;}
+    public boolean getCheck() {return check;}
     public String getPassword() {
         return password;
     }
