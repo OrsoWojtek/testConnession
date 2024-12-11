@@ -1,7 +1,8 @@
-package com.example.progetto.login;
+package com.example.progetto.controller;
 
-import com.example.progetto.dao.LoginDAO_JDBC;
+import com.example.progetto.dao.jdbc.LoginDAO_JDBC;
 import com.example.progetto.exception.CredentialErrorException;
+import com.example.progetto.bean.LoginInfoBean;
 
 //----CONTROLLER APPLICATIVO PER GESTIRE UN PROCESSO DI AUTENTICAZIONE----
 public class LoginController {

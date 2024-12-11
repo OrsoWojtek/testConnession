@@ -1,6 +1,8 @@
-package com.example.progetto.login;
+package com.example.progetto.view.fx;
 
 import com.example.progetto.exception.CredentialErrorException;
+import com.example.progetto.controller.LoginController;
+import com.example.progetto.bean.LoginInfoBean;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -35,13 +37,19 @@ public class LoginFX {
             stage.setScene(scene);
             stage.show();
         } catch (CredentialErrorException e){                                                                           //Altrimenti...
-            showErrorPopup(e.getMessage());                                                                             //...Mostra un popup di errore
+            showErrorPopup(e.getMessage(), "Errore di login");                                                     //...Mostra un popup di errore
         }
     }
+
+    //----METODO CHIAMATO AL CLICK DELLA RICHIESTA DI REGISTRAZIONE----
+    @FXML
+    public void onRegistReqClick(){
+        showErrorPopup("Questa funzionalità non è stata ancora implementata.\nCi dispiace per il disagio.", "Funzionalità inesistente");
+    }
     //----METODO PER POPUP DI ERRORE----
-    private void showErrorPopup(String message) {
+    private void showErrorPopup(String message, String title) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Errore di login");
+        alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);
 

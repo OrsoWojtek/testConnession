@@ -1,8 +1,8 @@
-package com.example.progetto.dao;
+package com.example.progetto.dao.jdbc;
 
 import com.example.progetto.Connectivity;
 import com.example.progetto.exception.CredentialErrorException;
-import com.example.progetto.login.LoginInfoBean;
+import com.example.progetto.bean.LoginInfoBean;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

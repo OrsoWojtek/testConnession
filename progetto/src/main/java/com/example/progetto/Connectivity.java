@@ -14,7 +14,7 @@ public class Connectivity {
     private static Connectivity istance; //----VARIABILE STATICA CHE CONTIENE L'UNICA ISTANZA DELLA CLASSE
     private final Connection connect; //----CONNESSIONE AL DB
 
-    //----COSTRUTTORE PRIVATO PER IMPEDIRE L'ISTANZA ESTERNA----
+    //----COSTRUTTORE PRIVATO PER IMPEDIRE L'ISTANZAZIONE ESTERNA----
     private Connectivity(){
         try{
             InputStream input = new FileInputStream("C://Users//AleB1//IdeaProjects//progetto//src//main//resources//connecting_info.properties");

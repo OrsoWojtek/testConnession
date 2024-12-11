@@ -7,9 +7,13 @@ module com.example.progetto {
 
     opens com.example.progetto to javafx.fxml;
     exports com.example.progetto;
-    exports com.example.progetto.dao;
     exports com.example.progetto.exception;
-    opens com.example.progetto.dao to javafx.fxml;
-    exports com.example.progetto.login;
-    opens com.example.progetto.login to javafx.fxml;
+    exports com.example.progetto.view.fx;
+    opens com.example.progetto.view.fx to javafx.fxml;
+    exports com.example.progetto.controller;
+    opens com.example.progetto.controller to javafx.fxml;
+    exports com.example.progetto.bean;
+    opens com.example.progetto.bean to javafx.fxml;
+    exports com.example.progetto.dao.jdbc;
+    opens com.example.progetto.dao.jdbc to javafx.fxml;
 }
