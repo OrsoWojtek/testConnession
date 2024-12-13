@@ -31,7 +31,7 @@ public class LoginFX {
         bean.setPassword(pssw.getText());
         try {
             controller.checkLogin(bean);                                                                                //Se le credenziali inserite sono corrette...
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/home.fxml")));          //...Mostra la pagina di home
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/home_studente.fxml")));          //...Mostra la pagina di home
             Stage stage = (Stage) username.getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);

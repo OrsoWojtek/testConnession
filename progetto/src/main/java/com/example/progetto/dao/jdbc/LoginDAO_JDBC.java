@@ -1,6 +1,6 @@
 package com.example.progetto.dao.jdbc;
 
-import com.example.progetto.Connectivity;
+import com.example.progetto.Connessione;
 import com.example.progetto.exception.CredentialErrorException;
 import com.example.progetto.bean.LoginInfoBean;
 
@@ -10,8 +10,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class LoginDAO_JDBC {
-    private final Connectivity connectivity = Connectivity.getInstance();
-    private final Connection connection = connectivity.getConnect();
+    private final Connessione connessione = Connessione.getInstance();
+    private final Connection connection = connessione.getConnect();
     private PreparedStatement statement = null;
 
     //----METODO PER VERIFICARE LA PRESENZA DELLE CREDENZIALI INSERITE NEL DB----
@@ -26,7 +26,7 @@ public class LoginDAO_JDBC {
         } catch (SQLException e) {
             throw new RuntimeException("Errore durante la verifica del login", e);
         } finally {
-            connectivity.close(statement);
+            connessione.close(statement);
         }
         if(!user_exist){
             throw new CredentialErrorException("Username e/o password inseriti non corretti o non registrati. Prego riprovare.");

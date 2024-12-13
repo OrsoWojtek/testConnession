@@ -12,8 +12,6 @@ public class LoginInfoBean {
     public void setPassword(String password) {
         this.password = password;
     }
-    public String getPassword() {
-        return password;
-    }
+    public String getPassword() {return password;}
     public String getUsername() {return username;}
 }

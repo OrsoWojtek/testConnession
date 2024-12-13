@@ -10,12 +10,12 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 //----CLASSE PER LA CONNESSIONE AL DB (IMPLEMENTA IL PATTERN SINGLETON)----
-public class Connectivity {
-    private static Connectivity istance; //----VARIABILE STATICA CHE CONTIENE L'UNICA ISTANZA DELLA CLASSE
+public class Connessione {
+    private static Connessione istance; //----VARIABILE STATICA CHE CONTIENE L'UNICA ISTANZA DELLA CLASSE
     private final Connection connect; //----CONNESSIONE AL DB
 
     //----COSTRUTTORE PRIVATO PER IMPEDIRE L'ISTANZAZIONE ESTERNA----
-    private Connectivity(){
+    private Connessione(){
         try{
             InputStream input = new FileInputStream("C://Users//AleB1//IdeaProjects//progetto//src//main//resources//connecting_info.properties");
             Properties properties = new Properties();
@@ -35,9 +35,9 @@ public class Connectivity {
     }
 
     //----METODO STATICO PER OTTENERE L'ISTANZA UNICA----
-    public static synchronized Connectivity getInstance(){
+    public static synchronized Connessione getInstance(){
         if(istance == null){
-            istance = new Connectivity();
+            istance = new Connessione();
         }
         return istance;
     }
