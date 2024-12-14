@@ -10,9 +10,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class LoginDAO_JDBC {
-    private final Connessione connessione = Connessione.getInstance();
-    private final Connection connection = connessione.getConnect();
+    private final Connessione connessione;
+    private final Connection connection;
     private PreparedStatement statement = null;
+
+    public LoginDAO_JDBC() throws SQLException {
+        connection = Connessione.getInstance().getConnect();
+        connessione = Connessione.getInstance();
+    }
+
 
     //----METODO PER VERIFICARE LA PRESENZA DELLE CREDENZIALI INSERITE NEL DB----
     public  void isRegistered(LoginInfoBean current_cred) throws CredentialErrorException {
