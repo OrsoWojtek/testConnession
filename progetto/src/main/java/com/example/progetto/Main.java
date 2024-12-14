@@ -17,7 +17,6 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
-        int pippi;
     }
 
     public static void main(String[] args) {
