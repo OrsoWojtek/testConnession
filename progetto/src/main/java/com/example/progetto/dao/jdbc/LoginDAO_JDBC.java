@@ -21,7 +21,7 @@ public class LoginDAO_JDBC {
 
 
     //----METODO PER VERIFICARE LA PRESENZA DELLE CREDENZIALI INSERITE NEL DB----
-    public  void isRegistered(LoginInfoBean current_cred) throws CredentialErrorException {
+    public void isRegistered(LoginInfoBean current_cred) throws CredentialErrorException {
         boolean user_exist;
         try {
             statement = connection.prepareStatement("SELECT username, password FROM utenti WHERE username = ? AND password = ?"); //Preparazione della query
